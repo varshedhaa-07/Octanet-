@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, h1, h2, h3, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #599ce4;
+    padding: 20px;
+    text-align: center;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.product {
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #599ce4;
+    padding: 10px;
+    text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Bakery</h1>
+        <p>Delicious treats freshly baked just for you!</p>
+    </header>
+    
+    <section id="products">
+        <h3>ITEMS</h3>
+        <div class="product">
+            <img src="D:\cake.jpg" alt="Cake">
+            <h3>Cake</h3>
+            <p>Indulge in our heavenly cakes for any occasion.</p>
+        </div>
+        <div class="product">
+            <img src="D:\bread.jpeg" alt="Bread">
+            <h3>Bread</h3>
+            <p>Freshly baked bread daily, perfect for your breakfast.</p>
+        </div>
+        <div class="product">
+            <img src="D:\brownie.jpg" alt="brownie">
+            <h3>Brownie</h3>
+            <p>Brownies are the ultimate celebration dessert.</p>
+        </div>
+        <div class="product">
+            <img src="D:\cup cake.webp" alt="cup cake">
+            <h3>cup cake</h3>
+            <p>Cupcakes are a little slice of heaven.</p>
+        </div>
+        <div class="product">
+            <img src="D:\biscuits" alt="biscuits">
+            <h3>Biscuits</h3>
+            <p>Have a Good Day.</p>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>Contact us at: varshu@ourbakery.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
