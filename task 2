@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+  body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://images.unsplash.com/photo-1518976024611-28bf4b48222e?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #adb613;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #EE8AF8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #58135E;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addTask">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const taskInput = document.getElementById("taskInput");
+    const addTaskButton = document.getElementById("addTask");
+    const taskList = document.getElementById("taskList");
+  
+    addTaskButton.addEventListener("click", function() {
+      const taskText = taskInput.value.trim();
+      if (taskText !== "") {
+        const li = document.createElement("li");
+        li.textContent = taskText;
+        taskList.appendChild(li);
+        taskInput.value = "";
+      }
+    });
+  
+    taskInput.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        addTaskButton.click();
+      }
+    });
+  
+    taskList.addEventListener("click", function(event) {
+      if (event.target.tagName === "LI") {
+        event.target.remove();
+      }
+    });
+  }); 
+</script>
+</body>
+</html>
